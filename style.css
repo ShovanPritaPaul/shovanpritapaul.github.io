@@ -1,67 +1,53 @@
+/* Full screen layout */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #a8edea, #fed6e3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #a8edea, #fed6e3); /* soft modern gradient */
+  font-family: Arial, sans-serif;
 }
 
-.circle-container {
-    text-align: center;
-    position: relative;
+.center-container {
+  text-align: center;
 }
 
-.circle {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
+.photo-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* perfect circle */
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
 }
 
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.3s;
+.photo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill circle without distortion */
+  transition: transform 0.3s;
 }
 
-.profile-photo:hover {
-    transform: scale(1.05);
+.photo-circle img:hover {
+  transform: scale(1.05);
 }
 
 .website-link {
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background-color: #ff6b81;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6b81;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .website-link:hover {
-    background-color: #ff4757;
-    transform: scale(1.05);
-}
-
-#ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 250px;
-    pointer-events: none;
+  background-color: #ff4757;
+  transform: scale(1.05);
 }
